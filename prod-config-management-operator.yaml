@@ -1,0 +1,11 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  clusterName: prod-cluster
+  git:
+    syncRepo: git@github.com:gdgcloudsantiagoapp/csp-config-management.git
+    syncBranch: master
+    secretType: none
+    policyDir: "config/prod"
