@@ -5,7 +5,7 @@ metadata:
 spec:
   clusterName: prod-cluster
   git:
-    syncRepo: https://github.com/gdgcloudsantiagoapp/csp-config-management.git
+    syncRepo: https://github.com/gdgcloudsantiagoapp/csp-config-management/
     syncBranch: master
     secretType: none
     policyDir: "prod"
