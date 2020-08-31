@@ -8,4 +8,4 @@ spec:
     syncRepo: git@github.com:gdgcloudsantiagoapp/csp-config-management.git
     syncBranch: master
     secretType: none
-    policyDir: "config/prod"
+    policyDir: "prod"
