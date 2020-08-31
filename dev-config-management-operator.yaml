@@ -5,7 +5,7 @@ metadata:
 spec:
   clusterName: dev-cluster
   git:
-    syncRepo: git@github.com:gdgcloudsantiagoapp/csp-config-management.git
+    syncRepo: https://github.com/gdgcloudsantiagoapp/csp-config-management/
     syncBranch: dev
     secretType: none
     policyDir: "dev"
