@@ -1,11 +1,8 @@
-# csp-config-management
-Anthos Configuration Management Directory
+# Guía de Instalación de CSP-Config-Management en Google Kubernetes Engine
 
-Installation
+## Paso 1 - Instalar Nomos.
 
-STEP 1 - INSTALL NOMOS:
-
-References:
+Referencias:
 https://cloud.google.com/anthos-config-management/docs/how-to/nomos-command#installing
 https://cloud.google.com/anthos-config-management/downloads
 
@@ -31,9 +28,9 @@ gsutil cp gs://config-management-release/released/latest/darwin_amd64/nomos nomo
 chmod +x ./nomos
 ```
 
-STEP 2 - INSTALL OPERATOR:
+## Paso 2 - Instalar el Operador de CSP Config Management en el cluster de Kubernetes mediante el comando kubectl.
 
-References:
+Referencias:
 https://cloud.google.com/anthos-config-management/docs/how-to/installing#installing
 
 ```
@@ -44,24 +41,28 @@ gsutil cp gs://config-management-release/released/latest/config-management-opera
 kubectl apply -f config-management-operator.yaml
 ```
 
-STEP 3 - CONFIGURATE OPERATOR:
+## Paso 3 - Configurar el Operador.
 
-References:
+Referencias:
 https://cloud.google.com/anthos-config-management/docs/how-to/installing#configuring-config-management-operator
 
-FOR DEV ENV:
+Ejemplo ambiente de desarrollo:
+
+Configración del Operador: https://github.com/gdgcloudsantiagoapp/csp-config-management/blob/master/dev-config-management-operator.yaml
 
 ```
 kubectl apply -f dev-config-management-operator.yaml
 ```
 
-FOR PROD ENV:
+Ejemplo ambiente productivo:
+
+Configración del Operador: https://github.com/gdgcloudsantiagoapp/csp-config-management/blob/master/prod-config-management-operator.yaml
 
 ```
 kubectl apply -f prod-config-management-operator.yaml
 ```
 
-STEP 3 - VERIFY INSTALLATION
+## Paso 4 - Verificar instalación y configuración del operador.
 
 ```
 ./nomos status
